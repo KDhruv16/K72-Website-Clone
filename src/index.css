@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@font-face {
+    font-family: font1;
+    src: url(/fonts/Lausanne-300.woff2);
+}
+@font-face {
+    font-family: font2;
+    src: url(/fonts/Lausanne-500.woff2);
+}
+*::selection{
+    background: #D3FD50;
+}@keyframes marqueAnimation{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+@keyframes hoverEffect{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+.moveLink:hover .moveX {
+  animation:  marqueAnimation 10s linear infinite,/* keep moving sideways */
+             hoverEffect 0.2s ease-in-out; /* faster drop */
+  background-color: #D3FD50;
+  opacity: 1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) ease;
+}
+.box:hover .cross{
+    background-color: #D3FD50;
+}
